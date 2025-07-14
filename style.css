@@ -1,0 +1,56 @@
+/* 🔲 Full background image */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('./Drumkit-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  /* 🧱 Container holding the keys */
+  .keys {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+  }
+  
+  /* 🎹 Each key block */
+  .key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 5px;
+    border: 2px solid #999;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.07s;
+  }
+  
+  /* ✨ Highlight on keypress */
+  .key.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+  }
+  
+  /* 🔠 Key label */
+  kbd {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  /* 🔊 Sound name */
+  .sound {
+    font-size: 1rem;
+    color: #333;
+  }
+  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./icon.jpg">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD's Drumkit</title>
+</head>
+<body>
+    <div class="background">
+        <img class="background" src="">
+    </div>
+    <div class ="keys">
+        <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span class="sound">Kick</span>
+        </div>
+        <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="sound">Snare2</span>
+        </div>
+        <div data-key="68" class="key">
+        <kbd>D</kbd>
+        <span class="sound">Snare3</span>
+        </div>
+        <div data-key="32" class="key">
+        <kbd>Space</kbd>
+        <span class="sound">Snare1</span>
+        </div>
+        <div data-key="13" class="key">
+        <kbd>Enter</kbd>
+        <span class="sound">Crash</span>
+        </div>
+    </div>
+    <audio data-key="65" src="./sounds/kick.mp3"></audio>
+    <audio data-key="83" src="./sounds/snare 1.mp3"></audio>
+    <audio data-key="68" src="./sounds/snare 2.mp3"></audio>
+    <audio data-key="32" src="./sounds/snare 3.mp3"></audio>
+    <audio data-key="13" src="./sounds/crash.mp3"></audio>
+<script>
+    window.addEventListener('keydown', function(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        if(!audio) return; 
+        audio.currentTime = 0;
+        audio.play();
+        console.log(key);
+    });
+</script>
+</body>
+</html>
